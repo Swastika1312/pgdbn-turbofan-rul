@@ -1,0 +1,11 @@
+Friedman chi2=23.667, p=0.00261, k=9, N=4, Nemenyi CD=6.007
+      Model  Average rank Worse than PG-DBN by > CD?
+    XGBoost          2.25                         no
+     PG-DBN          2.25                         no
+   LightGBM          3.00                         no
+Transformer          4.25                         no
+BiLSTM-Attn          5.00                         no
+       LSTM          5.75                         no
+        MLP          5.75                         no
+        TCN          7.75                         no
+     1D-CNN          9.00                        yes

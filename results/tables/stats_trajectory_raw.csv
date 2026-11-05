@@ -1,0 +1,33 @@
+subset,baseline,p,p_holm,rank_biserial,result
+FD001,MLP,0.0,0.0,-0.677,PG-DBN better
+FD001,1D-CNN,0.0,0.0,-0.744,PG-DBN better
+FD001,TCN,0.0,0.0,-0.79,PG-DBN better
+FD001,LSTM,0.00409,0.02046,-0.331,PG-DBN better
+FD001,BiLSTM-Attn,0.0432,0.12986,-0.233,no significant difference
+FD001,Transformer,0.64252,0.64252,-0.053,no significant difference
+FD001,XGBoost,0.03246,0.12986,-0.246,no significant difference
+FD001,LightGBM,0.04044,0.12986,-0.236,no significant difference
+FD002,MLP,0.0,0.0,-0.697,PG-DBN better
+FD002,1D-CNN,0.0,0.0,-0.881,PG-DBN better
+FD002,TCN,0.0,0.0,-0.751,PG-DBN better
+FD002,LSTM,0.0,0.0,-0.64,PG-DBN better
+FD002,BiLSTM-Attn,0.0,0.0,-0.684,PG-DBN better
+FD002,Transformer,0.0,0.0,-0.527,PG-DBN better
+FD002,XGBoost,0.07333,0.12334,-0.128,no significant difference
+FD002,LightGBM,0.06167,0.12334,-0.134,no significant difference
+FD003,MLP,0.0,1e-05,-0.553,PG-DBN better
+FD003,1D-CNN,0.0,0.0,-0.886,PG-DBN better
+FD003,TCN,0.0,0.0,-0.752,PG-DBN better
+FD003,LSTM,0.00021,0.00107,-0.427,PG-DBN better
+FD003,BiLSTM-Attn,0.00486,0.01945,-0.324,PG-DBN better
+FD003,Transformer,0.14871,0.44614,-0.166,no significant difference
+FD003,XGBoost,0.67236,0.81462,0.049,no significant difference
+FD003,LightGBM,0.40731,0.81462,0.095,no significant difference
+FD004,MLP,0.0,0.0,-0.437,PG-DBN better
+FD004,1D-CNN,0.0,0.0,-0.897,PG-DBN better
+FD004,TCN,0.0,0.0,-0.733,PG-DBN better
+FD004,LSTM,0.0,1e-05,-0.344,PG-DBN better
+FD004,BiLSTM-Attn,1e-05,3e-05,-0.329,PG-DBN better
+FD004,Transformer,0.00144,0.00431,0.233,PG-DBN worse
+FD004,XGBoost,0.13004,0.13004,-0.111,no significant difference
+FD004,LightGBM,0.04178,0.08357,-0.149,no significant difference

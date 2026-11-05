@@ -1,0 +1,17 @@
+\begin{table}
+\caption{Model size and single-window CPU latency (Intel(R) Xeon(R) CPU @ 2.00GHz, 1 thread, FP32).}
+\label{tab:table4_complexity}
+\begin{tabular}{lrrrl}
+\toprule
+Model & Params & Size\_KB & Latency\_ms & Monotonic \\
+\midrule
+MLP & 124289 & 486 & 0.077000 & No \\
+1D-CNN & 27041 & 106 & 0.232000 & No \\
+TCN & 52449 & 205 & 1.285000 & No \\
+LSTM & 55873 & 218 & 0.546000 & No \\
+BiLSTM-Attn & 41602 & 163 & 0.839000 & No \\
+Transformer & 70017 & 274 & 0.641000 & No \\
+PG-DBN & 65985 & 258 & 0.801000 & Yes \\
+\bottomrule
+\end{tabular}
+\end{table}
