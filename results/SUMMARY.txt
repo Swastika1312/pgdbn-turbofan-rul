@@ -1,0 +1,18 @@
+Run finished in 35.8 min on cuda. Seeds: [0, 1, 2]. Subsets: ['FD001', 'FD002', 'FD003', 'FD004'].
+
+FD001: PG-DBN RMSE 12.54 ± 0.72 (deployed after COPC 15.97); best baseline LightGBM 12.39; PG-DBN trajectory RMSE raw 13.22 -> COPC 17.91; raw MVR 37.07% -> 0.00%
+FD002: PG-DBN RMSE 13.51 ± 0.06 (deployed after COPC 17.64); best baseline XGBoost 13.78; PG-DBN trajectory RMSE raw 15.60 -> COPC 21.87; raw MVR 37.61% -> 0.00%
+FD003: PG-DBN RMSE 12.86 ± 0.62 (deployed after COPC 14.10); best baseline MLP 12.07; PG-DBN trajectory RMSE raw 10.91 -> COPC 14.22; raw MVR 29.40% -> 0.00%
+FD004: PG-DBN RMSE 14.75 ± 0.10 (deployed after COPC 17.60); best baseline Transformer 15.06; PG-DBN trajectory RMSE raw 13.41 -> COPC 18.88; raw MVR 29.54% -> 0.00%
+
+Wilcoxon (last window), Holm-significant baselines where PG-DBN is better:
+  FD001: MLP, 1D-CNN, TCN, LSTM, Transformer
+  FD002: MLP, 1D-CNN, TCN, LSTM, BiLSTM-Attn
+  FD003: 1D-CNN, TCN, LSTM
+  FD004: MLP, 1D-CNN, TCN
+
+Ratchet test (trajectory after COPC), Holm-significant baselines where PG-DBN is better:
+  FD001: MLP, 1D-CNN, TCN, XGBoost, LightGBM
+  FD002: MLP, 1D-CNN, TCN, LSTM, BiLSTM-Attn, Transformer
+  FD003: MLP, 1D-CNN, TCN
+  FD004: MLP, 1D-CNN, TCN, XGBoost, LightGBM
