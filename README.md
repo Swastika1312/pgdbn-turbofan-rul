@@ -5,20 +5,15 @@ Code, results and trained models for the paper
 > **PG-DBN: A Physics-Guided Dual-Branch Network for Monotonic Remaining Useful Life Prediction of Turbofan Engines**
 > S. Chakraborty, S. Ghosh, P. Karmakar, S. Dash, S. Sur. Submitted to IEEE MPCON.
 
-PG-DBN predicts the remaining useful life (RUL) of turbofan engines on NASA C-MAPSS. It fuses a two-layer LSTM with a trend branch over per-sensor degradation slopes (dS/dt), rolling means and dispersion, is trained with a pairwise monotonicity penalty, and is deployed behind a Causal Operational Physics Constraint (COPC), a zero-look-ahead running minimum that guarantees a non-increasing RUL. The study compares nine models on all four subsets with trajectory-level metrics and paired per-engine significance tests.
+This repository reproduces every table and figure in the paper. The model combines an LSTM with a branch built on sensor-trend features, adds a training penalty against rising RUL, and passes its output through a running minimum so the reported RUL never goes up. 
+## Main numbers
+| Subset | PG-DBN RMSE | Best baseline RMSE | PG-DBN raw MVR | MVR after COPC | |---|---|---|---|---| 
+| FD001 | 12.54 ± 0.72 | 12.39 (LightGBM) | 37.1% | 0.00% | 
+| FD002 | **13.51 ± 0.06** | 13.78 (XGBoost) | 37.6% | 0.00% | 
+| FD003 | 12.86 ± 0.62 | 12.07 (MLP) | 29.4% | 0.00% | 
+| FD004 | **14.75 ± 0.10** | 15.06 (Transformer) | 29.5% | 0.00% | 
 
-## Key results (mean over 3 seeds)
-
-| Subset | PG-DBN RMSE | Best baseline RMSE | PG-DBN raw MVR | MVR after COPC |
-|---|---|---|---|---|
-| FD001 | 12.54 ± 0.72 | 12.39 (LightGBM) | 37.1% | 0.00% |
-| FD002 | **13.51 ± 0.06** | 13.78 (XGBoost) | 37.6% | 0.00% |
-| FD003 | 12.86 ± 0.62 | 12.07 (MLP) | 29.4% | 0.00% |
-| FD004 | **14.75 ± 0.10** | 15.06 (Transformer) | 29.5% | 0.00% |
-
-* The eight baselines (MLP, 1D-CNN, TCN, LSTM, BiLSTM-Attn, Transformer, XGBoost, LightGBM) predict an RUL increase in 19.6%–44.2% of consecutive cycles.
-* PG-DBN shares the best Friedman rank with XGBoost and is never significantly less accurate than any baseline at the last window (Wilcoxon, Holm-corrected).
-* COPC removes every violation for any model but raises trajectory RMSE by 2.7–8.4 cycles. After COPC is applied to all nine models, PG-DBN is the only model in the top three on all four subsets.
+See the paper for the full comparison with eight baselines, significance tests and the ablation.
 
 Full numbers: `results/tables/` and `results/SUMMARY.txt`.
 
