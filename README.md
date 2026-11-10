@@ -6,12 +6,15 @@ Code, results and trained models for the paper
 > S. Chakraborty, S. Ghosh, P. Karmakar, S. Dash, S. Sur. Submitted to IEEE MPCON.
 
 This repository reproduces every table and figure in the paper. The model combines an LSTM with a branch built on sensor-trend features, adds a training penalty against rising RUL, and passes its output through a running minimum so the reported RUL never goes up. 
+
 ## Main numbers
-| Subset | PG-DBN RMSE | Best baseline RMSE | PG-DBN raw MVR | MVR after COPC | |---|---|---|---|---| 
-| FD001 | 12.54 ± 0.72 | 12.39 (LightGBM) | 37.1% | 0.00% | 
-| FD002 | **13.51 ± 0.06** | 13.78 (XGBoost) | 37.6% | 0.00% | 
-| FD003 | 12.86 ± 0.62 | 12.07 (MLP) | 29.4% | 0.00% | 
-| FD004 | **14.75 ± 0.10** | 15.06 (Transformer) | 29.5% | 0.00% | 
+
+| Subset | PG-DBN RMSE | Best baseline RMSE | PG-DBN raw MVR | MVR after COPC |
+|---|---|---|---|---|
+| FD001 | 12.54 ± 0.72 | 12.39 (LightGBM) | 37.1% | 0.00% |
+| FD002 | **13.51 ± 0.06** | 13.78 (XGBoost) | 37.6% | 0.00% |
+| FD003 | 12.86 ± 0.62 | 12.07 (MLP) | 29.4% | 0.00% |
+| FD004 | **14.75 ± 0.10** | 15.06 (Transformer) | 29.5% | 0.00% |
 
 See the paper for the full comparison with eight baselines, significance tests and the ablation.
 
